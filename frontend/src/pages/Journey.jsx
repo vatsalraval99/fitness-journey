@@ -122,7 +122,7 @@ function MilestoneDetail({ week, onBack }) {
 
       <div style={{padding:"16px 20px",background:"linear-gradient(135deg,#0d1f1a,#0a0a1f 50%,#1a0d1f)",border:"1px solid var(--border)",borderRadius:14,marginBottom:14,position:"relative",overflow:"hidden"}}>
         <div style={{fontSize:11,color:"var(--muted)",fontWeight:700,textTransform:"uppercase",letterSpacing:"0.8px",marginBottom:4}}>Week {week} — Milestone {week}</div>
-        <div style={{fontSize:20,fontWeight:800,background:"linear-gradient(135deg,var(--accent),var(--accent3))",-webkitBackgroundClip:"text",-webkitTextFillColor:"transparent",backgroundClip:"text"}}>
+        <div style={{fontSize:20,fontWeight:800,background:"linear-gradient(135deg,var(--accent),var(--accent3))",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>
           Target: {mw} kg
         </div>
         <div style={{fontSize:12,color:"var(--muted)",marginTop:4}}>{cal} kcal/day target · {isDone?"Completed":isActive?"In progress":"Not started yet"}</div>
