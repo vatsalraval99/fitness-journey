@@ -15,7 +15,10 @@ export default function Checkin() {
   const [result,  setResult]  = useState(null);
 
   const totalW     = j.totalWeeks+j.extensionWeeks;
-  const isCheckinDay = (new Date().getDay()||7)===7;
+  const journeyStart = new Date(j.startDate);
+  const todayDate2   = new Date(new Date().toISOString().slice(0,10));
+  const elapsedDays  = Math.floor((todayDate2 - journeyStart) / (1000*60*60*24));
+  const isCheckinDay = (elapsedDays % 7) + 1 === 7;
   const TIER_BADGE = {on_track:"green",ahead:"green",slightly_ahead:"green",slightly_behind:"amber",behind:"danger"};
 
   async function runCheckin() {
