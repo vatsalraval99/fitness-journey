@@ -59,9 +59,9 @@ export default function Checkin() {
         <div style={{padding:"20px",background:"var(--surface2)",border:"1px solid var(--border)",borderRadius:14,marginBottom:14,textAlign:"center"}}>
           <div style={{fontSize:24,marginBottom:8}}>🔒</div>
           <div style={{fontSize:15,fontWeight:700,marginBottom:4}}>Check-in unlocks on Day 7</div>
-          <div style={{fontSize:13,color:"var(--muted)"}}>Come back on Sunday to evaluate Week {currentWeek} and unlock Milestone {currentWeek+1}</div>
+          <div style={{fontSize:13,color:"var(--muted)"}}>Come back on Day 7 of your journey week to evaluate Week {currentWeek} and unlock Milestone {currentWeek+1}</div>
           <div style={{marginTop:12,padding:"10px 14px",background:"rgba(0,229,160,0.07)",border:"1px solid rgba(0,229,160,0.2)",borderRadius:8,fontSize:12,color:"var(--accent)"}}>
-            Today is Day {new Date().getDay()||7} of 7
+            Today is Day {(elapsedDays % 7) + 1} of 7 — {7 - ((elapsedDays % 7) + 1)} day{7-((elapsedDays%7)+1)!==1?"s":""} until check-in
           </div>
         </div>
       )}
